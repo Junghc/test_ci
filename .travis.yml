@@ -10,6 +10,7 @@ script: true
 # command to run tests
 script:
   - python cal.py
+
 deploy:
   provider: heroku
   api_key:
@@ -17,5 +18,6 @@ deploy:
   app: testcd00457019
   on:
     repo: Junghc/test_ci
+  #Setting your heroku Procfile here!!!
   run:
-    "web: gunicorn app_run:app"
+    "web: gunicorn app_run:app"    
