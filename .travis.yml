@@ -10,3 +10,12 @@ script: true
 # command to run tests
 script:
   - python cal.py
+deploy:
+  provider: heroku
+  api_key:
+    secure: d430b880-87cd-4896-9789-4c654b08008e
+  app: testcd00457019
+  on:
+    repo: Junghc/test_ci
+  run:
+    "web: gunicorn app_run:app"
